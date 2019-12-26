@@ -1,0 +1,34 @@
+/* ==========================================================================
+   Variables
+   ---
+   Global SCSS variables (override default values defined in component files)
+   ========================================================================== */
+
+/* Typography
+   ========================================================================== */
+
+$g-base-font-family: "Untitled Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !default;
+$g-code-font-family: "Atlas Typewriter Web", Consolas, 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace !default;
+$g-base-font-size: 1.5rem !default;
+$g-base-line-height: 1.5 !default;
+$g-headings-font-weight: 500 !default;
+$g-headings-font-family: "Untitled Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !default;
+
+/* Colors
+   ========================================================================== */
+
+$g-text-color: #FFF;
+
+/* Breakpoints
+   ========================================================================== */
+
+$g-bp1: 400px;
+$g-bp-footer: 620px;
+$g-bp2: 700px;
+$g-bp3: 900px;
+$g-bp4: 1200px;
+
+/* General
+   ========================================================================== */
+
+$g-spacer-unit: 0.8rem;

@@ -1,0 +1,26 @@
+/* ==========================================================================
+  c-header
+   ========================================================================== */
+
+.c-header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 144rem;
+  margin: 0 auto;
+}
+
+.c-header p {
+  padding: 1.6rem;
+  a {
+    display: block;
+    padding: 1.6rem 0;
+    @media (min-width: $g-bp3) {
+        padding: 1.6rem;
+    }
+    &:hover,
+    &:focus {
+      background: rgba(#FFF,0.1);
+      transition: 0.17s background ease-in-out;
+    }
+  }
+}

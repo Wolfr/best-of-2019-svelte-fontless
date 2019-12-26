@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "app.css",
+	"sources": [
+		"../../scss/app.scss"
+	],
+	"sourcesContent": [
+		"* {\n  background: yellow !important;\n}\n\ndiv {\n  background: red !important;\n}"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,CAAC,CAAC;EACA,UAAU,EAAE,iBAAiB,GAC9B;;AAED,AAAA,GAAG,CAAC;EACF,UAAU,EAAE,cAAc,GAC3B"
+}

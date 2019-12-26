@@ -1,0 +1,73 @@
+/* ==========================================================================
+    Object: Container
+    ---
+    Usage: Container for content - Set max widths
+   ========================================================================== */
+
+/* Variables
+   ========================================================================== */
+
+$o-container-max-width-small: 56rem;
+$o-container-max-width-medium: 72rem;
+$o-container-max-width-large: 94rem;
+$o-container-max-width: 130rem;
+$o-container-side-gap: 1.2rem !default; // Should be 1/2 of grid col gap
+
+/* Object
+   ========================================================================== */
+
+.o-container {
+  margin: 0 auto;
+  max-width: $o-container-max-width;
+  padding: 0 $o-container-side-gap;
+}
+
+.o-container--small {
+  margin: 0 auto;
+  max-width: $o-container-max-width-small;
+}
+
+.o-container--medium {
+  margin: 0 auto;
+  max-width: $o-container-max-width-medium;
+}
+
+.o-container--large {
+  margin: 0 auto;
+  max-width: $o-container-max-width-large;
+}
+
+/* ==========================================================================
+  Container vertical
+   ========================================================================== */
+
+/* Block spacing
+   ========================================================================== */
+
+.o-container-vertical--padding-small {
+   padding: 2.4rem 0;
+}
+
+.o-container-vertical { // Standard padding
+   padding: 3.6rem 0;
+}
+
+.o-container-vertical--padding-medium {
+   padding: 4.8rem 0;
+}
+
+.o-container-vertical--padding-large {
+   padding: 6.4rem 0;
+}
+
+/* Block modifiers
+   Change the look of the entire block
+   ========================================================================== */
+
+.o-container-vertical--bg-alt {
+   background: $color-gray-50;
+}
+
+.o-container-vertical--bottom-bordered {
+  border-bottom: 1px solid $color-gray-100;
+}

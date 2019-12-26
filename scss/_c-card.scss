@@ -1,0 +1,58 @@
+/* ==========================================================================
+  c-card
+  ---
+  Used for albums layout
+   ========================================================================== */
+
+.c-cards {
+   display: grid;
+   margin: 0 0 3.6rem;
+   grid-gap: 4.8rem;
+   grid-template-columns: repeat(auto-fit, minmax(3.6rem, 1fr));
+
+}
+
+.c-card-image {
+  img {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    object-fit: cover;
+  }
+}
+
+.c-card {
+  text-align: center;
+  
+  grid-column-end: span 4;
+  @media (min-width: $g-bp3) {
+    grid-column-end: span 3;
+  }
+}
+
+.c-card__heading {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #FFF;
+  margin: 0 0 0.4rem;
+}
+
+.c-card__body {
+  padding: 1.6rem;
+}
+
+.c-card__meta {
+  opacity: 0.6;
+  margin: 0.3rem 0;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+}
+
+.c-card__category {
+  display: inline-block;
+  border-radius: 1.6rem;
+  padding: 0.2rem 0.8rem;
+  margin: 0.4rem;
+  font-size: 1.2rem;
+  background: rgba(#FFF,0.15);
+}

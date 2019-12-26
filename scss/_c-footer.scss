@@ -1,0 +1,25 @@
+/* ==========================================================================
+  c-footer
+   ========================================================================== */
+
+.c-footer {
+  max-width: 144rem;
+  margin: 0 auto;
+}
+
+.c-footer ul {
+  @media (min-width: $g-bp-footer) {
+    display: flex;
+  }
+}
+
+.c-footer li {
+  padding: 0.8rem 1.6rem;
+  @media (min-width: $g-bp-footer) {
+    padding: 1.6rem;
+  }
+}
+
+.c-footer a {
+  color: #999;
+}

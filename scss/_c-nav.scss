@@ -1,0 +1,23 @@
+/* ==========================================================================
+  Component: nav
+   ========================================================================== */
+
+.c-nav {
+  padding: 1.6rem;
+}
+
+.c-nav a {
+  padding: 1.6rem;
+  font-family: $g-code-font-family;
+  display: inline-block;
+  &:hover,
+  &:focus {
+    background: rgba(#FFF,0.1);
+    transition: 0.17s background ease-in-out;
+  }
+}
+
+.c-nav a.active {
+  background: rgba(#FFF,0.1);
+  color: #FFF;
+}

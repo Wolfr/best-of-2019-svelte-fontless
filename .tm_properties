@@ -1,0 +1,3 @@
+excludeInFolderSearch = "{$excludeInFolderSearch,public/build,public/css,tmp,.git,*.mp4,.bower_components,contents/css,dist,node_modules,compiled}"
+include = "{$include,.fontcustom-manifest.json,.circleci,.eslintrc.json,.eslintrc.yaml,.gitignore,.bower,.htpasswd,.htaccess-server,.htaccess-template,jshintrc,.editorconfig,.tmp,.prettifyrc}"
+excludeInFileChooser = "{$exclude,$excludeInFolderSearch}"

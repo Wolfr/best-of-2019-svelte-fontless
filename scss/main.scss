@@ -1,0 +1,50 @@
+/* ==========================================================================
+  Stylesheet for Best of 2019
+  ITCSS + BEM
+   ========================================================================== */
+
+/* Settings: preprocessor variables, colors, global settings
+   ========================================================================== */
+
+@import "_s-fonts";
+@import "_s-colors";
+@import "_s-semantic-colors";
+@import "_s-variables";
+
+/* Generic: CSS reset, box-sizing, global CSS tweaks
+   ========================================================================== */
+
+@import "_reset";
+
+/* Elements: element selectors, CMS-generated content
+   ========================================================================== */
+
+@import "_e-base";
+
+/* Objects: layout-related CSS, grid, SVG icons frame, flexbox classes
+   ========================================================================== */
+
+@import "_o-container";
+@import "_o-flex";
+@import "_o-grid";
+
+/* Components: separately styled components (buttons, form inputs, toolbars...)
+   ========================================================================== */
+
+@import "_c-card";
+@import "_c-btn";
+@import "_c-btn-toolbar";
+@import "_c-intro";
+@import "_c-content";
+@import "_c-footer";
+@import "_c-header";
+@import "_c-categories-nav";
+@import "_c-nav";
+
+/* Utilities: specific helper classes, overrides
+   ========================================================================== */
+
+@import "_u-generic";
+@import "_u-spacer";
+@import "_u-display";
+
