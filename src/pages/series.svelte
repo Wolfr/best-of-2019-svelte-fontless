@@ -1,4 +1,6 @@
 <script>
+    import { fade } from 'svelte/transition';
+
     import FancyTitle from '../components/FancyTitle.svelte';
     import items from './series.js';
 </script>
@@ -12,17 +14,17 @@
          <FancyTitle line2="Series" />
 
         <div class="c-content">
-          <p class="c-intro">Last year I said Netflix kept on releasing interesting series but I think I cancelled and restarted my subscription twice this year. There was a definite lack of good series and I would have to look elsewhere to find good content. I even re-watched Weeds and Mad Men because I was looking for something good. Luckily, Apple launched Apple TV with two fun series and at the end of the year, the Witcher landed on Netflix, so all in all, it wasn’t that bad.</p>
+          <p class="c-intro">Last year I said Netflix kept on releasing interesting series but I think I cancelled and restarted my subscription twice this year. There was a definite lack of good series and I would have to look elsewhere to find good content. I even re-watched Weeds and Mad Men because I was looking for something good. Luckily, Apple launched Apple TV+ with two fun series and at the end of the year, the Witcher landed on Netflix, so all in all, it wasn’t that bad.</p>
         </div>
     </div>
 </div>
 
 {#each items as item}
-<div class="o-container-vertical">
+<div class="o-container-vertical" in:fade='{{ duration: 500}}' out:fade='{{ duration: 0}}'>
     <div class="o-container o-container--large">
         <div class="o-grid">
             <div class="o-grid-col-bp3-6">
-                <p><img src="/images/series/{item.fileRef}" alt="{ item.seriesName}"></p>
+                <p><img src="/images/series/{item.fileRef}" class="c-two-col__image" alt="{ item.seriesName}"></p>
             </div>
             <div class="o-grid-col-bp3-6">
                 <div class="c-content">

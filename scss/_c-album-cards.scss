@@ -1,0 +1,15 @@
+/* ==========================================================================
+  c-album-cards
+  ---
+  Used for albums layout
+   ========================================================================== */
+
+.c-album-cards {
+   display: grid;
+   margin: 0 0 2.4rem;
+   grid-gap: 2.4rem;
+   @media (min-width: $g-bp3) {
+     grid-gap: 6.4rem;
+   }
+   grid-template-columns: repeat(auto-fit, minmax(4.8rem, 1fr));
+}

@@ -27,8 +27,13 @@ body {
   font-family: $g-base-font-family;
   font-size: $g-base-font-size;
   line-height: $g-base-line-height;
-  color: #A0A4AE;
-  background: #1B2130;
+  color: #333;
+  background: #FFF;
+  @media (prefers-color-scheme: dark) {
+    color: #A0A4AE;
+    background: #1B2130;
+  }
+  font-feature-settings: "liga", "kern";
 }
 
 img,
@@ -57,10 +62,17 @@ strong, b {
   font-weight: $g-headings-font-weight;
 }
 
-/* Required fields
-   ========================================================================== */
-
 abbr[title] {
   text-decoration: none;
   opacity: 0.5;
+}
+
+img {
+  max-width: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+  img {
+    filter: brightness(0.9) contrast(1.1);
+  }
 }

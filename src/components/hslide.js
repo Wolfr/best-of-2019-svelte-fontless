@@ -1,7 +1,8 @@
 import { expoInOut } from 'svelte/easing'
+
 export function hslide(node, {
-    delay = 0,
-    duration = 240,
+    delay = 200,
+    duration = 440,
     easing = expoInOut
 }) {
     const style = getComputedStyle(node);

@@ -5,7 +5,7 @@ export default [
     "review": "Maybe my favorite series of 2019. Strong acting by Zendaya. Each episode focusses on the backstory of a character while there is also a central story arc.",
     "platform": "Telenet Play (HBO)",
     "fileRef": "euphoria.jpg",
-    "trailerLink": "@TODO",
+    "trailerLink": "https://www.youtube.com/watch?v=teCrVa0J8v4",
     "imdbLink": "https://www.imdb.com/title/tt8772296/"
   },
   {
@@ -19,20 +19,20 @@ export default [
   },
   {
     "seriesName": "The Morning Show",
-    "imdbDesc": "An inside look at the people who help Americans wake up each day, exploring the challenges faced by the people who work in morning television.",
-    "review": "Look beyond the marketing and just give this a chance for two episodes, I guarantee you will be hooked.",
+    "imdbDesc": "What happens when the people you trust to tell the truth prove themselves to be dishonest? The Morning Show follows the free fall of an early morning newscast in the wake of a scandal, and its struggle to survive in an era when news arrives in the palm of your hand.",
+    "review": "Look beyond the marketing images and just give this a chance for two episodes, I guarantee you will be hooked.",
     "platform": "Apple TV",
     "fileRef": "morning-show.jpg",
-    "trailerLink": "@TODO",
+    "trailerLink": "https://www.youtube.com/watch?v=eA7D4_qU9jo",
     "imdbLink": "https://www.imdb.com/title/tt7203552/"
   },
   {
     "seriesName": "Dickinson",
-    "imdbDesc": "An inside look at the world of writer Emily Dickinson.",
+    "imdbDesc": "Dickinson is a half-hour comedy series starring Oscar nominee Hailee Steinfeld. Dickinson audaciously explores the constraints of society, gender, and family from the perspective of rebellious young poet Emily Dickinson. ",
     "review": "Dickinson mixes modern-day pop music with a classic Victorian era setting. I like, it's funny, and the 30 minute episodes are quite snackable.",
     "platform": "Apple TV",
     "fileRef": "dickinson.jpg",
-    "trailerLink": "@TODO",
+    "trailerLink": "https://www.youtube.com/watch?v=_GtV9V0dBgw",
     "imdbLink": "https://www.imdb.com/title/tt8518136/"
   },
   {
@@ -41,16 +41,16 @@ export default [
     "review": "The humor is kind of weird but for some reason I kept on watching. Ideal one to turn your brain off in the evening.",
     "platform": "Apple TV",
     "fileRef": "workin-moms.jpg",
-    "trailerLink": "@TODO",
+    "trailerLink": "https://www.youtube.com/watch?v=gk1vKFcUxyU",
     "imdbLink": "https://www.imdb.com/title/tt6143796/"
   },
   {
     "seriesName": "Formula 1: Drive to Survive",
     "imdbDesc": "Docuseries following the 2018 FIA Formula One World Championship.",
-    "review": "I think this series might be responsible for making me passionate about F1. Güenther Steiner ftw",
+    "review": "I think this series might be responsible for making me passionate about F1. Güenther Steiner ftw.",
     "platform": "Apple TV",
     "fileRef": "formula-1.jpg",
-    "trailerLink": "@TODO",
+    "trailerLink": "https://www.youtube.com/watch?v=wtJPe1ksS6E",
     "imdbLink": "https://www.imdb.com/title/tt8289930/"
   },
   {
@@ -59,7 +59,7 @@ export default [
     "review": "I'm sending this documentary to anyone that thinks rich people are evil by default or to idiots who think anyone who has more than $1M should be taxed 100%. If you're wealthy you can spend it towards good things. Bill Gates proves this quite well in this doc.",
     "platform": "Apple TV",
     "fileRef": "inside-bills-brain.jpg",
-    "trailerLink": "@TODO",
+    "trailerLink": "https://www.youtube.com/watch?v=aCv29JKmHNY",
     "imdbLink": "https://www.imdb.com/title/tt10837476/"
   },
 ]

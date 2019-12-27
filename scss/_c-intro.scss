@@ -6,7 +6,11 @@
   font-size: 1.9rem;
   line-height: 1.7;
   font-family: $g-code-font-family;
-  color: #FFF;
+  color: #000;
+  @media (prefers-color-scheme: dark) {
+    color: #FFF;
+  }
+
 }
 
 .c-intro--lg {

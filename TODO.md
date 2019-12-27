@@ -1,18 +1,14 @@
 ## TODO
 
-* Fix the links to IMDB and youtube for movies part
+* test on iPad
 
-* Fix the links to IMDB and youtube for series part
+* test in Safari
 
-* Fix spacing in the films part on low breakpoints
+* test in Firefox
 
-* Improve content for the films part
+* test in simulator
 
-* Write more content for the games part
-
-* Style the title top left
-
-* Find a way for the games slider to only animate on user action
+* test on Android
 
 * Experiment with radial gradients for the globe on the front page
 
@@ -21,19 +17,24 @@
 
 * Optimize images: take more images into Photoshop and look at pixels manually
 
-* Improve mobile nav implementation - another look? Design the look
-
-* Fix problem - report problem with decode fonts?
+* GT image check if we have the right one
 
 ## WBN
 
-* Implement dark mode - light mode switch
-
+* Find a way to combine the two media queries for the slider
 * Create an apple touch icon
 
-* Implement sticky footer
+## Bug reports
 
-* Style 404 page better
+* Simon: I like it! Especially in dark mode. Small bug: the footer links in light mode change to white on hover, making them invisible.
+* Dries: Bug report : arrow on carousel images show on both sides even if only one side works (eg. Games section).
+* Dries: section divider between honorable mentions
+* Roel: make the hamburger icon bigger on mobile
+
+## Feature requests
+
+* Feature request : direct spotify links on music tracks.
+
 ## TODO making of
 
 * Install callout plugin in johanronsse2 theme

@@ -4,36 +4,8 @@
    ========================================================================== */
 /* Settings: preprocessor variables, colors, global settings
    ========================================================================== */
-@font-face {
-  font-family: "Untitled Sans";
-  font-weight: 400;
-  src: url("../fonts/untitled-sans-web-regular.woff2") format("woff2"), url("../fonts/untitled-sans-web-regular.woff2") format("woff"); }
-
-@font-face {
-  font-family: "Untitled Sans";
-  font-weight: 400;
-  font-style: italic;
-  src: url("../fonts/untitled-sans-web-regular-italic.woff2") format("woff2"), url("../fonts/untitled-sans-web-regular-italic.woff2") format("woff"); }
-
-@font-face {
-  font-family: "Untitled Sans";
-  font-weight: 500;
-  src: url("../fonts/untitled-sans-web-medium.woff2") format("woff2"), url("../fonts/untitled-sans-web-medium.woff2") format("woff"); }
-
-@font-face {
-  font-family: "Untitled Sans";
-  font-weight: 700;
-  src: url("../fonts/untitled-sans-web-bold.woff2") format("woff2"), url("../fonts/untitled-sans-web-bold.woff2") format("woff"); }
-
-@font-face {
-  font-family: 'Atlas Typewriter Web';
-  src: url("AtlasTypewriter-Regular-Web.woff2") format("woff2"), url("AtlasTypewriter-Regular-Web.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-stretch: normal; }
-
 /* ==========================================================================
-  Colors
+  Settings: Colors
   Only define colors here. Don't use sass color functions, stick to hex values,
   or the color component in styleguide won't regenerate automatically anymore.
  ========================================================================== */
@@ -134,11 +106,16 @@ html {
       font-size: 62.5%; } }
 
 body {
-  font-family: "Untitled Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 1.5rem;
-  line-height: 1.5;
-  color: #A0A4AE;
-  background: #1B2130; }
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1.7rem;
+  line-height: 1.65;
+  color: #333;
+  background: #FFF;
+  font-feature-settings: "liga", "kern"; }
+  @media (prefers-color-scheme: dark) {
+    body {
+      color: #A0A4AE;
+      background: #1B2130; } }
 
 img,
 video {
@@ -161,11 +138,16 @@ em, i {
 strong, b {
   font-weight: 500; }
 
-/* Required fields
-   ========================================================================== */
 abbr[title] {
   text-decoration: none;
   opacity: 0.5; }
+
+img {
+  max-width: 100%; }
+
+@media (prefers-color-scheme: dark) {
+  img {
+    filter: brightness(0.9) contrast(1.1); } }
 
 /* Objects: layout-related CSS, grid, SVG icons frame, flexbox classes
    ========================================================================== */
@@ -180,8 +162,8 @@ abbr[title] {
    ========================================================================== */
 .o-container {
   margin: 0 auto;
-  max-width: 130rem;
-  padding: 0 1.2rem; }
+  max-width: 140rem;
+  padding: 0 1.6rem; }
 
 .o-container--small {
   margin: 0 auto;
@@ -193,7 +175,7 @@ abbr[title] {
 
 .o-container--large {
   margin: 0 auto;
-  max-width: 94rem; }
+  max-width: 118rem; }
 
 /* ==========================================================================
   Container vertical
@@ -289,15 +271,15 @@ abbr[title] {
    ========================================================================== */
 .o-grid {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin-left: 1.6rem;
+  margin-right: 1.6rem; }
 
 /* Grid columns (default)
    ========================================================================== */
 [class*='o-grid-col'] {
   flex: 1 0 calc(100% - 3.2rem);
-  min-width: 0;
-  margin-left: 1.6rem;
-  margin-right: 1.6rem; }
+  min-width: 0; }
 
 .o-grid-col-1 {
   width: calc(8.33333% - 3.2rem);
@@ -349,7 +331,9 @@ abbr[title] {
 
 @media (min-width: 400px) {
   [class*='o-grid-col-bp1-'] {
-    flex: 1 1 auto; }
+    flex: 1 1 auto;
+    margin-left: 1.6rem;
+    margin-right: 1.6rem; }
   .o-grid-col-bp1-1 {
     width: calc(8.33333% - 3.2rem); }
   .o-grid-col-bp1-2 {
@@ -377,7 +361,9 @@ abbr[title] {
 
 @media (min-width: 600px) {
   [class*='o-grid-col-bp2-'] {
-    flex: 1 1 auto; }
+    flex: 1 1 auto;
+    margin-left: 1.6rem;
+    margin-right: 1.6rem; }
   .o-grid-col-bp2-1 {
     width: calc(8.33333% - 3.2rem); }
   .o-grid-col-bp2-2 {
@@ -405,7 +391,9 @@ abbr[title] {
 
 @media (min-width: 1024px) {
   [class*='o-grid-col-bp3-'] {
-    flex: 1 1 auto; }
+    flex: 1 1 auto;
+    margin-left: 1.6rem;
+    margin-right: 1.6rem; }
   .o-grid-col-bp3-1 {
     width: calc(8.33333% - 3.2rem); }
   .o-grid-col-bp3-2 {
@@ -448,51 +436,26 @@ abbr[title] {
 /* Components: separately styled components (buttons, form inputs, toolbars...)
    ========================================================================== */
 /* ==========================================================================
-  c-card
-  ---
-  Used for albums layout
+  c-brand
    ========================================================================== */
-.c-cards {
-  display: grid;
-  margin: 0 0 3.6rem;
-  grid-gap: 4.8rem;
-  grid-template-columns: repeat(auto-fit, minmax(3.6rem, 1fr)); }
+.c-brand p {
+  font-size: 2.2rem;
+  font-weight: 500; }
 
-.c-card-image img {
-  width: 100%;
-  margin: 0 auto;
-  display: block;
-  object-fit: cover; }
-
-.c-card {
-  text-align: center;
-  grid-column-end: span 4; }
-  @media (min-width: 900px) {
-    .c-card {
-      grid-column-end: span 3; } }
-
-.c-card__heading {
-  font-size: 1.6rem;
-  font-weight: 500;
-  color: #FFF;
-  margin: 0 0 0.4rem; }
-
-.c-card__body {
-  padding: 1.6rem; }
-
-.c-card__meta {
-  opacity: 0.6;
-  margin: 0.3rem 0;
-  text-transform: uppercase;
-  font-size: 1.3rem; }
-
-.c-card__category {
+.c-brand a {
+  color: #000;
+  padding: 0.8rem 0;
   display: inline-block;
-  border-radius: 1.6rem;
-  padding: 0.2rem 0.8rem;
-  margin: 0.4rem;
-  font-size: 1.2rem;
-  background: rgba(255, 255, 255, 0.15); }
+  transition: 0.17s background ease-in-out; }
+  @media (prefers-color-scheme: dark) {
+    .c-brand a {
+      color: #FFF; } }
+
+.c-brand a:hover {
+  background: rgba(255, 255, 255, 0.1); }
+
+.c-brand a:focus {
+  background: rgba(255, 255, 255, 0.2); }
 
 /* ==========================================================================
   c-btn
@@ -500,16 +463,25 @@ abbr[title] {
 .c-btn {
   white-space: nowrap;
   display: inline-block;
-  color: #FFF;
+  color: #000;
   text-decoration: none;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.1);
   padding: 1rem 1.4rem;
   font-size: 1.4rem;
   font-weight: 400;
   border: none !important; }
+  @media (prefers-color-scheme: dark) {
+    .c-btn {
+      color: #FFF; } }
+  @media (prefers-color-scheme: dark) {
+    .c-btn {
+      background: rgba(255, 255, 255, 0.2); } }
   .c-btn:hover, .c-btn:focus {
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(0, 0, 0, 0.4);
     transition: 0.17s background ease-in-out; }
+    @media (prefers-color-scheme: dark) {
+      .c-btn:hover, .c-btn:focus {
+        background: rgba(255, 255, 255, 0.4); } }
   .c-btn--lg {
     padding: 1.4rem 2.1rem;
     font-size: 1.9rem; }
@@ -529,16 +501,71 @@ abbr[title] {
   margin-left: 0.8rem; }
 
 /* ==========================================================================
-  c-intro
+  c-album-cards
+  ---
+  Used for albums layout
    ========================================================================== */
-.c-intro {
-  font-size: 1.9rem;
-  line-height: 1.7;
-  font-family: "Atlas Typewriter Web", Consolas, "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
-  color: #FFF; }
+.c-album-cards {
+  display: grid;
+  margin: 0 0 2.4rem;
+  grid-gap: 2.4rem;
+  grid-template-columns: repeat(auto-fit, minmax(4.8rem, 1fr)); }
+  @media (min-width: 900px) {
+    .c-album-cards {
+      grid-gap: 6.4rem; } }
 
-.c-intro--lg {
-  font-size: 180%; }
+/* ==========================================================================
+  c-album-card
+   ========================================================================== */
+.c-album-card {
+  text-align: center;
+  grid-column-end: span 4; }
+  @media (min-width: 900px) {
+    .c-album-card {
+      grid-column-end: span 3; } }
+
+.c-album-card__heading {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #000;
+  margin: 0 0 0.4rem; }
+  @media (prefers-color-scheme: dark) {
+    .c-album-card__heading {
+      color: #FFF; } }
+
+.c-album-card__body {
+  padding: 1.6rem; }
+
+.c-album-card__meta {
+  opacity: 0.6;
+  margin: 0.3rem 0;
+  text-transform: uppercase;
+  font-size: 1.3rem; }
+
+.c-album-card__category {
+  display: inline-block;
+  border-radius: 1.6rem;
+  padding: 0.2rem 0.8rem;
+  margin: 0.4rem;
+  font-size: 1.2rem;
+  background: rgba(0, 0, 0, 0.15); }
+  @media (prefers-color-scheme: dark) {
+    .c-album-card__category {
+      background: rgba(255, 255, 255, 0.15); } }
+
+/* ==========================================================================
+   Categories nav 
+   ========================================================================== */
+.c-categories-nav {
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+  padding-top: 3.2rem;
+  margin-bottom: 3.2rem; }
+  @media (prefers-color-scheme: dark) {
+    .c-categories-nav {
+      border-top: 1px solid rgba(255, 255, 255, 0.25); } }
+  .c-categories-nav .c-btn {
+    margin: 0.4rem; }
 
 /* ==========================================================================
   c-content
@@ -549,40 +576,48 @@ abbr[title] {
   ---
   Usage: use these classes to style individual components like their rich text equivalent
    ========================================================================== */
+.c-h1, .c-content h1,
+.c-h2, .c-content h2,
+.c-h3, .c-content h3,
+.c-h4, .c-content h4 {
+  color: #000; }
+  @media (prefers-color-scheme: dark) {
+    .c-h1, .c-content h1,
+    .c-h2, .c-content h2,
+    .c-h3, .c-content h3,
+    .c-h4, .c-content h4 {
+      color: #FFF; } }
+
 .c-h1, .c-content h1 {
   font-family: "Untitled Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-weight: 500;
   font-size: 3.2rem;
   margin: 0 0 3.2rem;
-  line-height: 1.25;
-  color: #FFF; }
+  line-height: 1.25; }
 
 .c-h2, .c-content h2 {
   font-family: "Untitled Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-weight: 500;
   font-size: 2.4rem;
   margin: 0 0 1.6rem;
-  line-height: 1.25;
-  color: #FFF; }
+  line-height: 1.25; }
 
 .c-h3, .c-content h3 {
   font-family: "Untitled Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-weight: 500;
   font-size: 2.1rem;
   margin: 0 0 1.5rem;
-  line-height: 1.25;
-  color: #FFF; }
+  line-height: 1.25; }
 
 .c-h4, .c-content h4 {
-  font-family: "Untitled Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 1.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1.7rem;
   font-weight: 500;
   margin: 0 0 1.5rem;
-  font-weight: 500;
-  color: #FFF; }
+  font-weight: 500; }
 
 .c-body-1 {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   margin: 1.5rem 0; }
 
 .c-body-2 {
@@ -593,7 +628,10 @@ abbr[title] {
   margin: 1.5rem 0; }
 
 .c-content b, .c-content strong {
-  color: #FFF; }
+  color: #000; }
+  @media (prefers-color-scheme: dark) {
+    .c-content b, .c-content strong {
+      color: #FFF; } }
 
 .c-content dl {
   border: 1px solid #D6DEE3;
@@ -660,7 +698,7 @@ abbr[title] {
   white-space: pre-wrap; }
 
 .c-content pre, .c-content code {
-  font-family: "Atlas Typewriter Web", Consolas, "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace; }
+  font-family: Consolas, "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace; }
 
 .c-content code {
   font-size: 90%; }
@@ -669,7 +707,6 @@ abbr[title] {
   c-footer
    ========================================================================== */
 .c-footer {
-  max-width: 144rem;
   margin: 0 auto; }
 
 @media (min-width: 620px) {
@@ -677,63 +714,162 @@ abbr[title] {
     display: flex; } }
 
 .c-footer li {
-  padding: 0.8rem 1.6rem; }
+  padding: 0.8rem 1.6rem 0.8rem 0; }
   @media (min-width: 620px) {
     .c-footer li {
       padding: 1.6rem; } }
 
 .c-footer a {
-  color: #999; }
+  color: #666; }
+  @media (prefers-color-scheme: dark) {
+    .c-footer a {
+      color: #999; } }
+
+.c-footer a:hover,
+.c-footer a:focus {
+  color: #000; }
+  @media (prefers-color-scheme: dark) {
+    .c-footer a:hover,
+    .c-footer a:focus {
+      color: #FFF; } }
 
 /* ==========================================================================
   c-header
    ========================================================================== */
 .c-header {
-  display: flex;
-  justify-content: space-between;
-  max-width: 144rem;
-  margin: 0 auto; }
-
-.c-header p {
   padding: 1.6rem; }
-  .c-header p a {
-    display: block;
-    padding: 1.6rem 0; }
-    @media (min-width: 900px) {
-      .c-header p a {
-        padding: 1.6rem; } }
-    .c-header p a:hover, .c-header p a:focus {
-      background: rgba(255, 255, 255, 0.1);
-      transition: 0.17s background ease-in-out; }
 
 /* ==========================================================================
-   Categories nav 
+  c-intro
    ========================================================================== */
-.c-categories-nav {
-  text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.25);
-  padding-top: 3.2rem;
-  margin-bottom: 3.2rem; }
-  .c-categories-nav .c-btn {
-    margin: 0.4rem; }
+.c-intro {
+  font-size: 1.9rem;
+  line-height: 1.7;
+  font-family: Consolas, "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+  color: #000; }
+  @media (prefers-color-scheme: dark) {
+    .c-intro {
+      color: #FFF; } }
 
+.c-intro--lg {
+  font-size: 180%; }
+
+/* ==========================================================================
+  c-mobile-header
+   ========================================================================== */
 /* ==========================================================================
   Component: nav
    ========================================================================== */
-.c-nav {
-  padding: 1.6rem; }
-
 .c-nav a {
   padding: 1.6rem;
-  font-family: "Atlas Typewriter Web", Consolas, "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
-  display: inline-block; }
+  font-size: 1.5rem;
+  font-family: Consolas, "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+  display: inline-block;
+  padding: 1.6rem; }
   .c-nav a:hover, .c-nav a:focus {
-    background: rgba(255, 255, 255, 0.1);
-    transition: 0.17s background ease-in-out; }
+    background: rgba(0, 0, 0, 0.1);
+    transition: 0.17s background ease-in-out;
+    color: #000; }
+    @media (prefers-color-scheme: dark) {
+      .c-nav a:hover, .c-nav a:focus {
+        background: rgba(255, 255, 255, 0.1); } }
+    @media (prefers-color-scheme: dark) {
+      .c-nav a:hover, .c-nav a:focus {
+        color: #FFF; } }
 
 .c-nav a.active {
-  background: rgba(255, 255, 255, 0.1);
-  color: #FFF; }
+  background: rgba(0, 0, 0, 0.1);
+  color: #000; }
+  @media (prefers-color-scheme: dark) {
+    .c-nav a.active {
+      background: rgba(255, 255, 255, 0.1);
+      color: #FFF; } }
+
+.c-nav-logo-holder {
+  display: flex;
+  justify-content: space-between; }
+
+/* ==========================================================================
+  c-nav-mobile 
+   ========================================================================== */
+.c-nav-mobile {
+  background: #EEE;
+  position: fixed;
+  top: 6.4rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  overflow: auto;
+  height: 100%;
+  width: 100%; }
+  @media (prefers-color-scheme: dark) {
+    .c-nav-mobile {
+      background: #0B101C; } }
+
+.c-nav-mobile a {
+  margin: 0 auto;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+  padding: 0.6rem 1.6rem;
+  font-size: 4.8rem;
+  display: block;
+  color: #000;
+  font-weight: 500;
+  font-family: Consolas, "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace; }
+  @media (prefers-color-scheme: dark) {
+    .c-nav-mobile a {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.13); } }
+  @media (prefers-color-scheme: dark) {
+    .c-nav-mobile a {
+      color: #FFF; } }
+
+.c-nav-mobile a:hover,
+.c-nav-mobile a:focus {
+  background: rgba(0, 0, 0, 0.1); }
+  @media (prefers-color-scheme: dark) {
+    .c-nav-mobile a:hover,
+    .c-nav-mobile a:focus {
+      background: rgba(255, 255, 255, 0.1); } }
+
+.c-nav-mobile a:last-child {
+  border: none; }
+
+/* ==========================================================================
+  c-nav-toggle
+   ========================================================================== */
+.c-nav-toggle {
+  padding: 1.2rem 0; }
+
+.c-nav-toggle button {
+  background: none;
+  border: none;
+  height: 3.2rem;
+  width: 3.2rem;
+  display: flex; }
+
+.c-nav-toggle button svg {
+  margin: 0 auto; }
+
+/* ==========================================================================
+  c-sticky-footer-layout
+  ---
+  Implement sticky footer
+  Meant for homepage on large layouts
+   ========================================================================== */
+.c-sticky-footer-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%; }
+
+.c-sticky-footer-layout__item {
+  flex: 0 1 auto; }
+
+.c-sticky-footer-layout__item--grow {
+  flex: 1 1 auto;
+  display: flex; }
+
+.c-sticky-footer-layout__item-inner-center {
+  margin: auto; }
 
 /* Utilities: specific helper classes, overrides
    ========================================================================== */
@@ -783,36 +919,15 @@ abbr[title] {
 .u-m0 {
   margin: 0 !important; }
 
-.u-sr-accessible {
+.u-sr-only {
   position: absolute;
-  left: -10000px;
-  top: auto;
   width: 1px;
   height: 1px;
-  overflow: hidden; }
-
-.u-sr-accessible-table-cell {
-  display: flex;
-  position: absolute;
-  left: -10000px;
-  top: -10000px;
-  width: 0;
-  height: 1px;
+  padding: 0;
+  margin: -1px;
   overflow: hidden;
-  padding: 0 !important;
-  background: #FFF;
-  margin: 0 !important; }
-
-.u-limit-width {
-  max-width: 60rem; }
-
-.u-text-editable {
-  border-bottom: 1px dotted #666;
-  cursor: pointer; }
-
-.u-remove-link-styling a,
-.u-remove-link-styling {
-  color: #2B414F; }
+  clip: rect(0, 0, 0, 0);
+  border: 0; }
 
 /* ==========================================================================
   Utility: spacer
@@ -891,5 +1006,9 @@ abbr[title] {
    ========================================================================== */
 .u-d-block {
   display: block; }
+
+@media (max-width: 900px) {
+  .c-two-col__image {
+    margin-bottom: 1.2rem; } }
 
 /*# sourceMappingURL=main.css.map */

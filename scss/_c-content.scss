@@ -8,13 +8,23 @@
   Usage: use these classes to style individual components like their rich text equivalent
    ========================================================================== */
 
+
+.c-h1, .c-content h1,
+.c-h2, .c-content h2,
+.c-h3, .c-content h3,
+.c-h4, .c-content h4 {
+  color: #000;
+  @media (prefers-color-scheme: dark) {
+    color: #FFF;
+  }  
+}
+
 .c-h1, .c-content h1 {
   font-family: $g-headings-font-family;
   font-weight: $g-headings-font-weight;
   font-size: 3.2rem;
   margin: 0 0 3.2rem;
   line-height: 1.25;
-  color: #FFF;
 }
 
 .c-h2, .c-content h2 {
@@ -23,7 +33,6 @@
   font-size: 2.4rem;
   margin: 0 0 1.6rem;
   line-height: 1.25;
-  color: #FFF;
 }
 
 .c-h3, .c-content h3 {
@@ -32,7 +41,6 @@
   font-size: 2.1rem;
   margin: 0 0 1.5rem;
   line-height: 1.25;
-  color: #FFF;
 }
 
 .c-h4, .c-content h4 {
@@ -41,7 +49,6 @@
   font-weight: $g-headings-font-weight;
   margin: 0 0 1.5rem;
   font-weight: 500;
-  color: #FFF;
 }
 
 .c-body-1 {
@@ -61,7 +68,10 @@
   }
   
   b, strong {
-    color: #FFF;
+    color: #000;
+    @media (prefers-color-scheme: dark) {
+      color: #FFF;
+    }
   }
 
   dl {

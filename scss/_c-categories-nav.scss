@@ -3,8 +3,11 @@
    ========================================================================== */
 
 .c-categories-nav {
-  text-align: center;
-  border-top: 1px solid rgba(#FFF,0.25);
+  text-align: center;  
+  border-top: 1px solid rgba(#000,0.25);
+  @media (prefers-color-scheme: dark) {
+    border-top: 1px solid rgba(#FFF,0.25);
+  }
   padding-top: 3.2rem;
   margin-bottom: 3.2rem;
   .c-btn {

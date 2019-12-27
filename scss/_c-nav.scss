@@ -2,22 +2,33 @@
   Component: nav
    ========================================================================== */
 
-.c-nav {
-  padding: 1.6rem;
-}
-
 .c-nav a {
   padding: 1.6rem;
+  font-size: 1.5rem;
   font-family: $g-code-font-family;
   display: inline-block;
+  padding: 1.6rem;
   &:hover,
   &:focus {
-    background: rgba(#FFF,0.1);
+    background: rgba(#000,0.1);
+    @media (prefers-color-scheme: dark) {
+      background: rgba(#FFF,0.1);
+    }
+
     transition: 0.17s background ease-in-out;
+    color: #000;
+    @media (prefers-color-scheme: dark) {
+      color: #FFF;
+    }
+
   }
 }
 
 .c-nav a.active {
-  background: rgba(#FFF,0.1);
-  color: #FFF;
+  background: rgba(#000,0.1);
+  color: #000;
+  @media (prefers-color-scheme: dark) {
+    background: rgba(#FFF,0.1);
+    color: #FFF;
+  }
 }

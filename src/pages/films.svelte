@@ -1,4 +1,6 @@
 <script>
+    import { fade } from 'svelte/transition';
+
     import FancyTitle from '../components/FancyTitle.svelte';
     import items from './films.js';
 </script>
@@ -17,7 +19,7 @@
 </div>
 
 {#each items as item}
-<div class="o-container-vertical">
+<div class="o-container-vertical" in:fade='{{ duration: 500}}' out:fade='{{ duration: 0}}'>
     <div class="o-container o-container--large">
         <div class="o-grid">
             <div class="o-grid-col-bp3-6">

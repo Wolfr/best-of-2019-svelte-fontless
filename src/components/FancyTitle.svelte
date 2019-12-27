@@ -6,11 +6,23 @@
 <style>
 
     h1 {
-      font-size: 9.6rem;
       margin: 0 0 3.2rem;
       line-height: 1;
-      color: #FFF;
+      color: #000;
       font-weight: 500;
+      font-size: 6.4rem;
+    }
+    
+    @media (prefers-color-scheme: dark) {
+        h1 {
+            color: #FFF;
+        }
+    }
+    
+    @media (min-width: 800px) {
+        h1 {
+            font-size: 9.6rem;
+        }
     }
     
     span {

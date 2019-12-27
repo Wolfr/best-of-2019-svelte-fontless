@@ -10,6 +10,5 @@ export default [
   {
     "gameName": "Planet Zoo",
     "fileRef": "planet-zoo.jpg",
-  },
-	
+  }
 ]

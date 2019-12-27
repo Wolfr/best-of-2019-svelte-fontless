@@ -5,16 +5,27 @@
 .c-btn {
   white-space: nowrap;
   display: inline-block;
-  color: #FFF;
+  
+  color: #000;
+  @media (prefers-color-scheme: dark) {
+    color: #FFF;
+  }
+
   text-decoration: none;
-  background: rgba(#FFF,0.2);
+  background: rgba(#000,0.1);
+  @media (prefers-color-scheme: dark) {
+    background: rgba(#FFF,0.2);
+  }
   padding: 1rem 1.4rem;
   font-size: 1.4rem;
   font-weight: 400;
   border: none !important;
   &:hover,
   &:focus {
-    background: rgba(#FFF,0.4);
+    background: rgba(#000,0.4);
+    @media (prefers-color-scheme: dark) {
+      background: rgba(#FFF,0.4);
+    }
     transition: 0.17s background ease-in-out;
   }
   &--lg {

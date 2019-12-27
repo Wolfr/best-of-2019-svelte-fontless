@@ -1,0 +1,25 @@
+/* ==========================================================================
+  c-sticky-footer-layout
+  ---
+  Implement sticky footer
+  Meant for homepage on large layouts
+   ========================================================================== */
+
+.c-sticky-footer-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.c-sticky-footer-layout__item {
+  flex: 0 1 auto;
+}
+
+.c-sticky-footer-layout__item--grow {
+  flex: 1 1 auto;
+  display: flex;
+}
+
+.c-sticky-footer-layout__item-inner-center {
+  margin: auto;
+}

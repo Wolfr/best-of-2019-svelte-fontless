@@ -58,38 +58,13 @@
   margin: 0 !important;
 }
 
-.u-sr-accessible {
+.u-sr-only {
   position: absolute;
-  left: -10000px;
-  top: auto;
   width: 1px;
   height: 1px;
+  padding: 0;
+  margin: -1px;
   overflow: hidden;
-}
-
-.u-sr-accessible-table-cell {
-  display: flex; // Take out of regular table context
-  position: absolute;
-  left: -10000px;
-  top: -10000px;
-  width: 0;
-  height: 1px;
-  overflow: hidden;
-  padding: 0 !important;
-  background: #FFF;
-  margin: 0 !important;
-}
-
-.u-limit-width {
-  max-width: 60rem;
-}
-
-.u-text-editable {
-  border-bottom: 1px dotted #666;
-  cursor: pointer;
-}
-
-.u-remove-link-styling a,
-.u-remove-link-styling {
-  color: $color-gray-700;
+  clip: rect(0,0,0,0);
+  border: 0;
 }

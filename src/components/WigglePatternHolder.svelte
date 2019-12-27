@@ -1,12 +1,21 @@
 <style>
+
     div {
         margin-left: -4rem;
         margin-top: -4rem;
         cursor: default;
     }
+
     circle {
-        fill: #AFC6FF;
+        fill: #D5D5D6;
     }
+    
+    @media (prefers-color-scheme: dark) {
+        circle {
+            fill: #AFC6FF;
+        }
+    }
+
 </style>
 
 <div>

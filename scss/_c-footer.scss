@@ -3,7 +3,6 @@
    ========================================================================== */
 
 .c-footer {
-  max-width: 144rem;
   margin: 0 auto;
 }
 
@@ -14,12 +13,23 @@
 }
 
 .c-footer li {
-  padding: 0.8rem 1.6rem;
+  padding: 0.8rem 1.6rem 0.8rem 0;
   @media (min-width: $g-bp-footer) {
     padding: 1.6rem;
   }
 }
 
 .c-footer a {
-  color: #999;
+  color: #666;
+  @media (prefers-color-scheme: dark) {
+    color: #999;
+  }
+}
+
+.c-footer a:hover,
+.c-footer a:focus {
+  color: #000;
+  @media (prefers-color-scheme: dark) {
+    color: #FFF;
+  }
 }
