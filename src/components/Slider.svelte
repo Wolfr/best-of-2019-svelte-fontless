@@ -113,13 +113,13 @@
         }
     }
 
-    .slider-controls button:first-child {
+    .slider__btn-prev {
         position: absolute;
         left: 2rem;
         top: calc(50% - 1.2rem);
     }
     
-    .slider-controls button:last-child {
+    .slider__btn-next {
         position: absolute;
         right: 2rem;
         top: calc(50% - 1.2rem);
@@ -145,7 +145,6 @@
     }
 
     const clamp = (number, min, max) => Math.min(Math.max(number, min), max);
-
     function prev(e) { cur = clamp( --cur, 0, slides.length-1 ) }
     function next(e) { cur = clamp( ++cur, 0, slides.length-1 ) }
 
@@ -181,18 +180,21 @@
                 {/if}
             {/each}
             <div class="slider-controls">
-                <button on:click="{()=>prev()}">
-                    <!--Left button -->
-                    <svg width="78" height="78" viewBox="0 0 78 78" fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M39 78C17.4609 78 0 60.5391 0 39C0 17.4609 17.4609 0 39 0C60.5391 0 78 17.4609 78 39C78 60.5391 60.5391 78 39 78ZM27.8384 39.7907L38.7906 28.8383L41.114 31.1617L32.9662 39.3095H52V42.5952H32.9662L41.114 50.7431L38.7906 53.0664L27.8384 42.1141L26.6766 40.9524L27.8384 39.7907Z" fill="#000"/>
-                    </svg>
-                </button>
-                <button on:click="{()=>next()}">
-                    <!--Right button -->
-                    <svg width="78" height="78" viewBox="0 0 78 78" fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M39 78C60.5391 78 78 60.5391 78 39C78 17.4609 60.5391 0 39 0C17.4609 0 0 17.4609 0 39C0 60.5391 17.4609 78 39 78ZM50.1616 39.7907L39.2094 28.8383L36.886 31.1617L45.0338 39.3095H26V42.5952H45.0338L36.886 50.7431L39.2094 53.0664L50.1616 42.1141L51.3234 40.9524L50.1616 39.7907Z" fill="#000"/>
-                    </svg>
-                </button>
+                {#if cur != 0}
+                    <button on:click="{()=>prev()}" class="slider__btn-prev">
+                        <svg width="86" height="86" viewBox="0 0 86 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M43 82C21.4609 82 4 64.5391 4 43C4 21.4609 21.4609 4 43 4C64.5391 4 82 21.4609 82 43C82 64.5391 64.5391 82 43 82ZM31.8384 43.7907L42.7906 32.8383L45.114 35.1617L36.9662 43.3095H56V46.5952H36.9662L45.114 54.7431L42.7906 57.0664L31.8384 46.1141L30.6766 44.9524L31.8384 43.7907Z" fill="black"/>
+                        </svg>
+                    </button>
+                {/if}
+                {#if cur != slides.length-1}
+                    <button on:click="{()=>next()}" class="slider__btn-next">
+                        <!--Right button -->
+                        <svg width="86" height="86" viewBox="0 0 86 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M43 82C64.5391 82 82 64.5391 82 43C82 21.4609 64.5391 4 43 4C21.4609 4 4 21.4609 4 43C4 64.5391 21.4609 82 43 82ZM54.1616 43.7907L43.2094 32.8383L40.886 35.1617L49.0338 43.3095H30V46.5952H49.0338L40.886 54.7431L43.2094 57.0664L54.1616 46.1141L55.3234 44.9524L54.1616 43.7907Z" fill="black"/>
+                        </svg>
+                    </button>
+                {/if}
             </div>
         </div>
     </div>

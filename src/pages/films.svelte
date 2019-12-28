@@ -21,7 +21,7 @@
 {#each items as item}
 <div class="o-container-vertical" in:fade='{{ duration: 500}}' out:fade='{{ duration: 0}}'>
     <div class="o-container o-container--large">
-        <div class="o-grid">
+        <div class="o-grid o-grid-bp3">
             <div class="o-grid-col-bp3-6">
                 <p><img src="/images/films/{ item.fileRef }" alt="{ item.filmName}"></p>
             </div>

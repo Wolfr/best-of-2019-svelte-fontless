@@ -10,7 +10,7 @@
       line-height: 1;
       color: #000;
       font-weight: 500;
-      font-size: 6.4rem;
+      font-size: 8.5rem;
     }
     
     @media (prefers-color-scheme: dark) {

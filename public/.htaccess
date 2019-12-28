@@ -3,4 +3,5 @@ RewriteBase /
 RewriteRule ^index\.html$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !\.(png|jpg|jpeg|mp4|gif)$
 RewriteRule . /index.html [L]

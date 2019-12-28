@@ -10,8 +10,15 @@
     h1 {
         font-size: 12.8rem;
         font-weight: 500;
-        color: #FFF;
+        color: #000;
     }
+
+    @media (prefers-color-scheme: dark) {
+        h1 {
+            color: #FFF;
+        }
+    }
+    
 </style>
 
 <div class="c-404">

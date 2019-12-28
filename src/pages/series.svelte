@@ -20,26 +20,26 @@
 </div>
 
 {#each items as item}
-<div class="o-container-vertical" in:fade='{{ duration: 500}}' out:fade='{{ duration: 0}}'>
-    <div class="o-container o-container--large">
-        <div class="o-grid">
-            <div class="o-grid-col-bp3-6">
-                <p><img src="/images/series/{item.fileRef}" class="c-two-col__image" alt="{ item.seriesName}"></p>
-            </div>
-            <div class="o-grid-col-bp3-6">
-                <div class="c-content">
-                    <h2>{ item.seriesName }</h2>
-                    <p><em>{ item.imdbDesc }</em></p>
-                    <p>{ item.review }</p>
-                    <p class="c-btn-toolbar">
-                        <a href="{ item.trailerLink }" class="c-btn">Trailer</a>
-                        <a href="{ item.imdbLink }" class="c-btn">IMDB</a>
-                    </p>
+    <div class="o-container-vertical" in:fade='{{ duration: 500}}' out:fade='{{ duration: 0}}'>
+        <div class="o-container o-container--large">
+            <div class="o-grid o-grid-bp3">
+                <div class="o-grid-col-bp3-6">
+                    <p><img src="/images/series/{item.fileRef}" class="c-two-col__image" alt="{ item.seriesName}"></p>
+                </div>
+                <div class="o-grid-col-bp3-6">
+                    <div class="c-content">
+                        <h2>{ item.seriesName }</h2>
+                        <p><em>{ item.imdbDesc }</em></p>
+                        <p>{ item.review }</p>
+                        <p class="c-btn-toolbar">
+                            <a href="{ item.trailerLink }" class="c-btn">Trailer</a>
+                            <a href="{ item.imdbLink }" class="c-btn">IMDB</a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 {/each}
 
 <div class="o-container-vertical">
