@@ -1,10 +1,10 @@
-
-# Best of 2019
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      # Best of 2019
 
 ## Tech used
 
 * I used the Svelte JS template as a base. It lives at https://github.com/sveltejs/template.
 * For routing I used Routify: http://routify.now.sh/
+* See technical write-up at https://johanronsse.be/blog/making-of-best-of-2019
 
 ## Running the project
 
